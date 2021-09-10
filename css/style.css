@@ -1,0 +1,71 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+/* 
+>firstly i have used the universal selector (*) to set a reset for all the browsers and declared some Css properties margin, padding and box-sizing
+>>Then second i have declared and assigned some css properties to the body font{family,weight,size} and line height-->unit used-->vh(viewport height)
+>>>Third in class header used bacground-image: linear-gradient()-->{sets the background image(s) of an element} then {to the right bottom,}--->meaning-->the color will go from left to right changing and "bottom" used here means it will go to from top left cornor to the bottom right cornor shading
+>>>>Fourth used clip-path property to clip the page to a certain shape
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.801),
+      rgba(40, 180, 133, 0.801)
+    ),
+    url(../img/hero-small.jpg);
+  height: 95vh;
+  position: relative;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.logoBox {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo {
+  height: 35px;
+}
+.text-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heading-primary {
+  color: #fff;
+  position: relative;
+  top: 140px;
+  text-transform: uppercase;
+}
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+}
